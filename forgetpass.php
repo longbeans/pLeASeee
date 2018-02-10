@@ -20,7 +20,7 @@ if (!$con)
 	if($email1 == $email)
 	{
 		$_SESSION["otp"] = rand(100000,999999); //generate OTP
-		require_once("phpmailerr.php"); //send OTP
+		require_once("phpmailer.php"); //send OTP
 		$mail_status = sendOTP($email1,$_SESSION["otp"]);
 		header ("Location: resetpass.html");
 	}
