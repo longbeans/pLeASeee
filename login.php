@@ -32,7 +32,7 @@ if ((date ("G") >= 9) && (date ("G") <= 22))
 		if($response["success"]==true)
 		{
 			$_SESSION["otp"] = rand(100000,999999); //generate OTP
-			require_once("phpmailerr.php"); //send OTP
+			require_once("phpmailer.php"); //send OTP
 			$mail_status = sendOTP($email1,$_SESSION["otp"]);
 			echo"Welcome";
 			header ("Location: otpv2.html");
